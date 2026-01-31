@@ -759,6 +759,352 @@
             fill: var(--dark);
         }
 
+        /* Subscription Section */
+        #subscribe {
+            background: linear-gradient(180deg, transparent 0%, rgba(123, 47, 255, 0.05) 50%, transparent 100%);
+        }
+
+        .subscription-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .subscription-toggle {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .toggle-btn {
+            padding: 1rem 2.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50px;
+            color: var(--light);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .toggle-btn:hover,
+        .toggle-btn.active {
+            background: var(--gradient-1);
+            border-color: transparent;
+            color: var(--dark);
+        }
+
+        .plans-dropdown {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .plan-card {
+            flex: 1;
+            min-width: 280px;
+            max-width: 400px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 1.5rem;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .plan-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(255, 45, 85, 0.2);
+        }
+
+        .plan-card.selected {
+            border-color: var(--primary);
+            background: rgba(255, 45, 85, 0.1);
+        }
+
+        .plan-card.selected .radio-circle {
+            background: var(--gradient-1);
+            border-color: transparent;
+        }
+
+        .plan-card.selected .radio-circle::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 10px;
+            height: 10px;
+            background: var(--dark);
+            border-radius: 50%;
+        }
+
+        .plan-image {
+            width: 100%;
+            height: 120px;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 1rem;
+        }
+
+        .plan-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .plan-card:hover .plan-image img {
+            transform: scale(1.1);
+        }
+
+        .plan-details {
+            flex: 1;
+        }
+
+        .plan-badge {
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            background: var(--gradient-2);
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.8rem;
+        }
+
+        .plan-badge.best-value {
+            background: var(--gradient-1);
+            color: var(--dark);
+        }
+
+        .plan-details h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .plan-price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+
+        .plan-price span {
+            font-size: 1rem;
+            font-weight: 400;
+            opacity: 0.7;
+        }
+
+        .plan-savings {
+            color: var(--accent);
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .plan-features {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .plan-features li {
+            color: var(--gray);
+            font-size: 0.9rem;
+            padding: 0.4rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .plan-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--secondary);
+            font-weight: bold;
+        }
+
+        .plan-select {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+        }
+
+        .radio-circle {
+            width: 24px;
+            height: 24px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .payment-section {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2rem;
+        }
+
+        .payment-section h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .payment-options {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .payment-option {
+            flex: 1;
+            min-width: 150px;
+            max-width: 200px;
+            padding: 1.5rem 1rem;
+            background: rgba(255, 255, 255, 0.03);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.8rem;
+            position: relative;
+        }
+
+        .payment-option:hover {
+            border-color: var(--secondary);
+            background: rgba(0, 212, 255, 0.05);
+        }
+
+        .payment-option.selected {
+            border-color: var(--secondary);
+            background: rgba(0, 212, 255, 0.1);
+        }
+
+        .payment-option.selected .payment-check {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .payment-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .payment-option:hover .payment-icon,
+        .payment-option.selected .payment-icon {
+            background: var(--gradient-2);
+        }
+
+        .payment-icon svg {
+            width: 28px;
+            height: 28px;
+            fill: var(--light);
+        }
+
+        .payment-option:hover .payment-icon svg,
+        .payment-option.selected .payment-icon svg {
+            fill: var(--dark);
+        }
+
+        .payment-icon.venmo {
+            background: #3D95CE;
+        }
+
+        .payment-icon.apple {
+            background: #000;
+        }
+
+        .payment-option span {
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        .payment-check {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 24px;
+            height: 24px;
+            background: var(--secondary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transform: scale(0);
+            transition: all 0.3s ease;
+        }
+
+        .payment-check svg {
+            width: 14px;
+            height: 14px;
+            fill: var(--dark);
+        }
+
+        .subscribe-btn {
+            width: 100%;
+            padding: 1.2rem;
+            background: var(--gradient-1);
+            border: none;
+            border-radius: 50px;
+            color: var(--dark);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .subscribe-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .subscribe-btn:hover::before {
+            left: 100%;
+        }
+
+        .subscribe-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 40px rgba(255, 45, 85, 0.4);
+        }
+
         /* Mobile Menu */
         .mobile-toggle {
             display: none;
@@ -841,6 +1187,7 @@
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#subscribe">Subscribe</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
@@ -950,6 +1297,95 @@
                 <h3>The Art of Automotive Photography</h3>
                 <p>Welcome to Moss Car Photography. I'm Jake, and I'm passionate about capturing the beauty, power, and elegance of some of the world's most incredible automobiles.</p>
                 
+            </div>
+        </div>
+    </section>
+
+    <!-- Subscription Section -->
+    <section id="subscribe">
+        <div class="section-header">
+            <h2>Subscribe</h2>
+            <p>Get exclusive access to premium content and behind-the-scenes footage</p>
+        </div>
+        <div class="subscription-container">
+            <div class="subscription-toggle">
+                <button class="toggle-btn active" onclick="showPlans()">Choose Your Plan</button>
+            </div>
+            
+            <div class="plans-dropdown" id="plansDropdown">
+                <div class="plan-card" onclick="selectPlan(this, 'monthly')">
+                    <div class="plan-image">
+                        <img src="https://i.imgur.com/Rw56xcJ.jpeg" alt="Monthly Plan">
+                    </div>
+                    <div class="plan-details">
+                        <div class="plan-badge">Popular</div>
+                        <h3>Monthly</h3>
+                        <div class="plan-price">$9.99<span>/month</span></div>
+                        <ul class="plan-features">
+                            <li>Access to all photos</li>
+                            <li>Monthly wallpaper drops</li>
+                            <li>Behind-the-scenes content</li>
+                        </ul>
+                    </div>
+                    <div class="plan-select">
+                        <div class="radio-circle"></div>
+                    </div>
+                </div>
+                
+                <div class="plan-card" onclick="selectPlan(this, 'annual')">
+                    <div class="plan-image">
+                        <img src="https://i.imgur.com/MEItJ7J.jpeg" alt="Annual Plan">
+                    </div>
+                    <div class="plan-details">
+                        <div class="plan-badge best-value">Best Value</div>
+                        <h3>Annual</h3>
+                        <div class="plan-price">$79.99<span>/year</span></div>
+                        <div class="plan-savings">Save $39.89!</div>
+                        <ul class="plan-features">
+                            <li>Everything in Monthly</li>
+                            <li>Exclusive annual prints</li>
+                            <li>Early access to new shoots</li>
+                            <li>2 months FREE</li>
+                        </ul>
+                    </div>
+                    <div class="plan-select">
+                        <div class="radio-circle"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="payment-section" id="paymentSection">
+                <h3>Payment Method</h3>
+                <div class="payment-options">
+                    <div class="payment-option" onclick="selectPayment(this, 'card')">
+                        <div class="payment-icon">
+                            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/></svg>
+                        </div>
+                        <span>Credit Card</span>
+                        <div class="payment-check">
+                            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                        </div>
+                    </div>
+                    <div class="payment-option" onclick="selectPayment(this, 'venmo')">
+                        <div class="payment-icon venmo">
+                            <svg viewBox="0 0 24 24"><path d="M19.5 3c.9 1.5 1.3 3 1.3 5 0 5.5-4.7 12.7-8.5 17.7H5l-2-19h6.3l1.1 9c1-1.7 2.3-4.3 2.3-6.1 0-1.9-.3-3.1-.8-4.1L19.5 3z"/></svg>
+                        </div>
+                        <span>Venmo</span>
+                        <div class="payment-check">
+                            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                        </div>
+                    </div>
+                    <div class="payment-option" onclick="selectPayment(this, 'apple')">
+                        <div class="payment-icon apple">
+                            <svg viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                        </div>
+                        <span>Apple Pay</span>
+                        <div class="payment-check">
+                            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                        </div>
+                    </div>
+                </div>
+                <button class="subscribe-btn" onclick="processSubscription()">Subscribe Now</button>
             </div>
         </div>
     </section>
@@ -1067,6 +1503,47 @@
                 closeLightbox();
             }
         });
+
+        // Subscription functions
+        let selectedPlan = null;
+        let selectedPayment = null;
+
+        function showPlans() {
+            const dropdown = document.getElementById('plansDropdown');
+            dropdown.style.display = dropdown.style.display === 'none' ? 'flex' : 'flex';
+        }
+
+        function selectPlan(element, plan) {
+            document.querySelectorAll('.plan-card').forEach(card => {
+                card.classList.remove('selected');
+            });
+            element.classList.add('selected');
+            selectedPlan = plan;
+        }
+
+        function selectPayment(element, method) {
+            document.querySelectorAll('.payment-option').forEach(option => {
+                option.classList.remove('selected');
+            });
+            element.classList.add('selected');
+            selectedPayment = method;
+        }
+
+        function processSubscription() {
+            if (!selectedPlan) {
+                alert('Please select a subscription plan');
+                return;
+            }
+            if (!selectedPayment) {
+                alert('Please select a payment method');
+                return;
+            }
+            
+            const planName = selectedPlan === 'monthly' ? 'Monthly ($9.99/month)' : 'Annual ($79.99/year)';
+            const paymentName = selectedPayment === 'card' ? 'Credit Card' : selectedPayment === 'venmo' ? 'Venmo' : 'Apple Pay';
+            
+            alert(`Thank you for subscribing!\n\nPlan: ${planName}\nPayment: ${paymentName}\n\nYou will receive a confirmation email shortly.`);
+        }
 
         // Intersection Observer for scroll animations
         const observerOptions = {
